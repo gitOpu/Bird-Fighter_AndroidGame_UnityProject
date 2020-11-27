@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
       InstantiatePlayer();
+        Vector3 cameraPosition = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, 0)); 
+        gameObject.transform.position = new Vector3(-cameraPosition.x + 1.5f,  -cameraPosition.y,  0);
+        
+
+
     }
     void Update()
     {
@@ -35,7 +40,7 @@ public class PlayerController : MonoBehaviour
         //}
         //}
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !GameManager.shared.isGamePaused)
         {
             userActionInPlace = Camera.main.WorldToScreenPoint(Input.mousePosition);
             RotaedSprite(userActionInPlace);

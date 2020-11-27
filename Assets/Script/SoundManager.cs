@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource otherAudioSource;
     public AudioSource backgroundAudioSource;
 
-    // public AudioClip backgrundMusicClip;
+     public AudioClip backgrundMusicClip;
     public AudioClip duckDeathClip;
     public AudioClip fireClip;
     public AudioClip clickClip;
@@ -25,13 +25,19 @@ public class SoundManager : MonoBehaviour
 
         void Start()
     {
-       
-           // backgroundAudioSource.volume = 0.3f;
-          //  backgroundAudioSource.PlayOneShot(backgrundMusicClip);
-
-       
+        PlayBackgroundMusic();
     }
+    public void PlayBackgroundMusic()
+    {
+        backgroundAudioSource.volume = PlayerPrefs.HasKey("music") ? PlayerPrefs.GetFloat("music") : 0.5f;
+        // backgroundAudioSource.PlayOneShot(backgrundMusicClip);
+        backgroundAudioSource.clip = backgrundMusicClip;
+       
+        if (GameManager.shared.isGamePaused) return;
+        if (backgroundAudioSource.isPlaying) return;
+        backgroundAudioSource.Play();
 
+    }
     public void PlayDuckDeathSound()
     {
         otherAudioSource.volume = 0.8f;

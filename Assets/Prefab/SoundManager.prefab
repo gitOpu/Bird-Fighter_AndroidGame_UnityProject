@@ -237,9 +237,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d0fceee67b8184f8921d06a6e12710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundAudioSource: {fileID: 6524759836517714451}
   otherAudioSource: {fileID: 6524759836517714452}
+  backgroundAudioSource: {fileID: 6524759836517714451}
   backgrundMusicClip: {fileID: 8300000, guid: 112a004d47e77ef4caed3ca7298f5ec2, type: 3}
   duckDeathClip: {fileID: 8300000, guid: 34c8f3d193650754685f9097b5c334ee, type: 3}
   fireClip: {fileID: 8300000, guid: 7b6fe9b4cdd04d14491c099ac0306822, type: 3}
+  clickClip: {fileID: 0}
   isPlay: 0

@@ -1,17 +1,13 @@
-![](doc/cover.gif)
+![](doc/Cover.gif)
 
 My first Indie Unity Android Game
 **BirdFighter**
 *Game Play: Simple Android game, start with welcome screen, Tapped on Start Game Button, game will to the next scene and started. Birds are playing from right to left with different spawn time and velocity, main player gun fire by gun, birds hit by bullet, its will die and point will be counted. A control preset will appear when push button will be pressed, here you can control music, sound or may game replay, restart or quit.*
-
 ![](doc/1.png)
 ![](doc/2.png)
 
-
 **All Written Script**
-
 ### Assistant Class (Plug & Play)
-
 *Boundary.cs*
 ```C#
 public class Boundary : MonoBehaviour
